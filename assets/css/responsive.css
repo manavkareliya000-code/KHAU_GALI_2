@@ -1,96 +1,470 @@
-@media(max-width:1200px){
+/* =====================================================
+   RESPONSIVE FIXES
+   Desktop styles are untouched. All changes below apply
+   only under the listed breakpoints.
+===================================================== */
 
-    .hero-content h1{
-        font-size:70px;
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 70px;
     }
 
-    .food-grid{
-        grid-template-columns:
-        repeat(2,1fr);
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .combo-grid{
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-}
-
-@media(max-width:992px){
-
-    .navbar{
-        padding:0 25px;
+    .combo-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    nav{
-        display:none;
+    .about-section,
+    .contact-section {
+        padding-left: 50px;
+        padding-right: 50px;
+        gap: 50px;
     }
 
-    .hero{
-        padding-top:140px;
-    }
-
-    .hero-content{
-        width:100%;
-    }
-
-    .offer-wrapper{
-        display:none;
-    }
-
-    .stats{
-        flex-wrap:wrap;
+    .about-content h2,
+    .contact-left h2 {
+        font-size: 60px;
     }
 }
 
-@media(max-width:768px){
-
-    .food-grid{
-        grid-template-columns:1fr;
+@media (max-width: 992px) {
+    body {
+        overflow-x: hidden;
     }
 
-    .combo-grid{
-        grid-template-columns:1fr;
+    .navbar {
+        padding: 10px 0 !important;
     }
 
-    .menu-top{
-        flex-direction:column;
-        gap:20px;
-        align-items:flex-start;
+    .navbar .container {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .menu-top input{
-        width:100%;
+    .navbar-toggler {
+        border: 0 !important;
+        box-shadow: none !important;
+        padding: 6px 8px !important;
     }
 
-    .hero-content h1{
-        font-size:55px;
+    .navbar-collapse {
+        width: 100%;
+        margin-top: 14px;
+        background: #fff7ef;
+        border-radius: 16px;
+        box-shadow: 0 18px 35px rgba(0, 0, 0, .10);
+        overflow: hidden;
     }
 
-    .cart-sidebar{
-        width:100%;
+    .navbar-collapse nav,
+    header.navbar nav {
+        display: flex !important;
+        width: 100%;
+        gap: 0 !important;
+        padding: 10px;
+        align-items: stretch !important;
+    }
+
+    .navbar-collapse nav a {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 10px;
+        color: #2c211c;
+    }
+
+    .navbar-collapse nav a.active,
+    .navbar-collapse nav a:hover {
+        background: #fff0e4;
+        color: var(--red);
+    }
+
+    .wishlist-btn,
+    .cart-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+        margin-top: 10px !important;
+    }
+
+    .wishlist-btn {
+        border-radius: 40px;
+        background: #fff;
+        box-shadow: var(--shadow);
+    }
+
+    .cart-btn {
+        padding: 0 16px;
+    }
+
+    .hero {
+        padding: 115px 6% 70px;
+        min-height: auto;
+    }
+
+    .hero-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content p {
+        width: 100%;
+    }
+
+    .offer-wrapper {
+        display: none;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+    }
+
+    .stat-card {
+        flex: 1 1 180px;
+    }
+
+    .menu-section,
+    .specials {
+        padding: 80px 6%;
+    }
+
+    .menu-section h2 {
+        font-size: 68px;
+    }
+
+    .menu-top {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .menu-top input {
+        width: 100%;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .filters button {
+        flex: 1 1 auto;
+    }
+
+    .about-section,
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 90px 6%;
+        gap: 45px;
+    }
+
+    .about-content h2,
+    .contact-left h2 {
+        font-size: 54px;
+    }
+
+    .contact-right {
+        justify-content: stretch;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .footer {
+        padding: 55px 6% 28px;
     }
 }
 
-@media(max-width:576px){
-
-    .hero-content h1{
-        font-size:42px;
+@media (max-width: 768px) {
+    .logo-circle {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
     }
 
-    .hero-buttons{
-        flex-direction:column;
+    .logo-text h3 {
+        font-size: 15px;
     }
 
-    .stats{
-        flex-direction:column;
+    .food-grid,
+    .combo-grid {
+        grid-template-columns: 1fr;
     }
 
-    .filters{
-        flex-wrap:wrap;
+    .hero {
+        padding: 105px 5% 55px;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .order-btn,
+    .deal-btn {
+        flex: 1 1 170px;
+        text-align: center;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        width: 100%;
+    }
+
+    .stat-card {
+        width: 100%;
+        padding: 16px 12px;
+    }
+
+    .stat-card h3 {
+        font-size: 20px;
+    }
+
+    .stat-card span {
+        font-size: 12px;
     }
 
     .menu-section h2,
-    .specials h2{
-        font-size:38px;
+    .specials h2 {
+        font-size: 46px;
+    }
+
+    .food-image,
+    .combo-card img {
+        height: 220px;
+    }
+
+    .food-header {
+        gap: 12px;
+    }
+
+    .badges {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .add-to-wishlist {
+        margin-left: auto;
+    }
+
+    .about-content h2,
+    .contact-left h2 {
+        font-size: 46px;
+    }
+
+    .fresh-card {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        min-width: 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .cart-sidebar {
+        width: 100vw;
+        right: -100vw;
+    }
+
+    .wishlist-sidebar {
+        width: 100vw;
+        left: -100vw;
+    }
+
+    .cart-body,
+    .wishlist-body {
+        padding: 16px;
+    }
+
+    .cart-footer {
+        padding: 18px;
+    }
+
+    .footer-container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 16px 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .hero {
+        padding: 95px 5% 45px;
+    }
+
+    .hero-top-text {
+        font-size: 11px;
+        margin-bottom: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+
+    .order-btn,
+    .deal-btn {
+        width: 100%;
+        flex: unset;
+        padding: 13px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-section,
+    .specials {
+        padding: 60px 5%;
+    }
+
+    .menu-section h2,
+    .specials h2 {
+        font-size: 38px;
+        line-height: 1.05;
+    }
+
+    .tag-line,
+    .specials p {
+        font-size: 14px;
+    }
+
+    .filters {
+        gap: 8px;
+    }
+
+    .filters button {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .food-content,
+    .combo-content {
+        padding: 18px;
+    }
+
+    .food-header h3 {
+        font-size: 19px;
+    }
+
+    .food-content p {
+        font-size: 14px;
+    }
+
+    .about-section,
+    .contact-section {
+        padding: 65px 5%;
+    }
+
+    .about-content h2,
+    .contact-left h2 {
+        font-size: 38px;
+        line-height: 1.05;
+    }
+
+    .about-image img {
+        border-radius: 20px;
+    }
+
+    .fresh-card h4 {
+        font-size: 16px;
+    }
+
+    .fresh-card p {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        padding: 16px;
+    }
+
+    .social-icons a {
+        width: 48px;
+        height: 48px;
+    }
+
+    .cart-item,
+    .wishlist-item {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .cart-item img,
+    .wishlist-item img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .toast.show {
+        right: 12px;
+        bottom: 16px;
+        max-width: calc(100vw - 24px);
+        border-radius: 14px;
+    }
+
+    .footer {
+        padding: 45px 5% 24px;
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .menu-section h2,
+    .specials h2,
+    .about-content h2,
+    .contact-left h2 {
+        font-size: 34px;
+    }
+
+    .filters button {
+        width: 100%;
+    }
+
+    .food-image,
+    .combo-card img {
+        height: 190px;
     }
 }
