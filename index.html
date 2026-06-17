@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khau-Gali | Street Food</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="assets/css/wishlist.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Google Fonts -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap icon -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar navbar-expand-lg sticky-top ">
+
+        <div class="container">
+
+            <!-- LOGO -->
+            <div class="logo d-flex align-items-center ms-5 gap-2">
+
+                <div class="logo-circle">KG</div>
+
+                <div class="logo-text">
+                    <h3>Khau-Gali</h3>
+                    <span>by DiGi Trend</span>
+                </div>
+
+            </div>
+
+            <!-- HAMBURGER -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU -->
+            <div class="collapse navbar-collapse justify-content-end me-5" id="navMenu">
+
+                <nav class="d-flex align-items-lg-center gap-lg-4 flex-column flex-lg-row mt-3 mt-lg-0">
+
+
+                    <a class="active" href="#menu-section">Menu</a>
+                    <a href="#specials">Specials</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+
+                    <button class="wishlist-btn mt-2 mt-lg-0 " id="wishlist-btn">
+                        <i class="bi bi-heart icon-border"></i>
+                        <i class="bi bi-heart-fill icon-fill"></i>
+
+
+                        <span>0</span>
+                    </button>
+
+                    <button class="cart-btn mt-2 mt-lg-0 ">
+                        <i class="bi bi-bag"></i>
+                        Cart
+                        <span>0</span>
+                    </button>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- hero section -->
+    <section class="hero" id="hero">
+
+        <img src="assets/images/hero/hero-bg.jpg" class="hero-bg">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-main">
+            <div class="hero-content">
+                <span class="hero-top-text">
+                    RAJKOT'S FAVOURITE STREET FOOD LANE
+                </span>
+
+                <h1>
+                    Khau-Gali<br>
+                    by DiGi<br>
+                    Trend
+                </h1>
+
+                <p>
+                    Fresh chaat, crispy snacks, loaded rolls, and local
+                    flavours made hot for busy food lovers across Rajkot.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="order-btn">
+                        order Now</button>
+
+
+                    <button class="deal-btn">
+                        View Deals</button>
+                </div>
+
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>25min</h3>
+                        <span>Avg delivery</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>4.8/5</h3>
+                        <span>Food rating</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>8+</h3>
+                        <span>Street bites</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer-wrapper">
+                <div class="offer-card">
+                    <span>Today only</span>
+
+                    <h3>
+                        Buy 2 Chaat,
+                        Get 1 Sev Puri
+                    </h3>
+
+                    <p>Auto-applied on cart review</p>
+                </div>
+
+                <div class="offer-card1">
+                    <span>Free delivery</span>
+
+                    <h3>
+                        Orders above ₹299
+                    </h3>
+
+                    <p>Rajkot city delivery zone</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- manu section -->
+    <section class="menu-section" id="menu-section">
+        <span class="section-tag">
+            HOT FROM THE TAWA
+        </span>
+
+        <h2>
+            Street Food Menu
+        </h2>
+        <p class="tag-line">
+            Search your cravings or filter by category. Every item is vegetarian, quick to serve, and full of
+            Rajkot-style punch.
+        </p>
+        <div>
+            <p>Search menu</p>
+        </div>
+        <div class="menu-top">
+
+            <input type="text" id="searchInput" placeholder="Try Dabeli, Roll, Chaat ...">
+
+            <div class="filters">
+                <button class="active" data-category="all">All</button>
+                <button data-category="chaat">Chaat</button>
+                <button data-category="snacks">Snacks</button>
+                <button data-category="rolls">Rolls</button>
+            </div>
+
+        </div>
+
+        <div class="food-grid" id="productsContainer">
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- specials -->
+    <section class="specials" id="specials">
+
+        <span class="section-tag">
+            TODAY'S DEALS
+        </span>
+
+        <h2>
+            Combos That Move <br>
+            Fast
+        </h2>
+
+        <p>
+            Made for group cravings,
+            late office breaks,
+            and evening walks near the food lane
+        </p>
+
+        <div class="combo-grid">
+
+            <div class="combo-card">
+
+                <img src="assets/images/foods/combo1.jpg">
+
+                <div class="combo-content">
+
+                    <span>Chaat Attack</span>
+
+                    <h3>
+                        Pani Puri + Sev Puri +
+                        Bhel Puri
+                    </h3>
+
+                    <p>
+                        A tangy trio packed with
+                        crunch and extra sev.
+                    </p>
+
+                    <button>
+                        Add Combo ₹179
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="combo-card">
+
+                <img src="assets/images/foods/combo2.jpg">
+
+                <div class="combo-content">
+
+                    <span>Office Break</span>
+
+                    <h3>
+                        Kathi Roll + Vada Pav +
+                        Masala Chaas
+                    </h3>
+
+                    <p>
+                        Filling, fast and built for
+                        a proper mid-day reset.
+                    </p>
+
+                    <button>
+                        Add Combo ₹189
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="combo-card">
+
+                <img src="assets/images/foods/combo3.jpg">
+
+                <div class="combo-content">
+
+                    <span>Family Gali Pack</span>
+
+                    <h3>
+                        Dabeli + Samosa +
+                        Aloo Tikki + Bhel
+                    </h3>
+
+                    <p>
+                        A shareable platter
+                        with chutney-rich bites.
+                    </p>
+
+                    <button>
+                        Add Combo ₹249
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     about section
+========================= -->
+
+    <section class="about-section" id="about">
+
+
+        <div class="about-image">
+            <img src="assets/images/about.jpg" alt="mnmnmn">
+            <div class="fresh-card">
+
+                <h4>Fresh batches</h4>
+
+                <p>Morning to midnight</p>
+
+            </div>
+        </div>
+
+        <div class="about-content">
+
+            <span class="section-tag">
+                OUR STORY
+            </span>
+
+            <h2>
+                Rajkot flavour,<br>
+                modern <br>
+                ordering.
+            </h2>
+
+            <p>
+                Khau-Gali by DiGi Trend brings the charm of Rajkot's busy food
+                lanes into a polished online ordering experience. The prototype
+                keeps the soul local: Gujarati names, vegetarian favourites,
+                quick combos, and city-friendly delivery.
+            </p>
+
+            <div class="about-card">
+                <h4>Authentic Taste</h4>
+                <p>
+                    Chutneys, masala, sev, and spice levels tuned for local cravings.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h4>Fast Prep</h4>
+                <p>
+                    Most dishes are ready in minutes and travel well across Rajkot.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h4>Simple Ordering</h4>
+                <p>
+                    Browse, add to cart, and place requests in just a few clicks.
+                </p>
+            </div>
+            <div class="stats-grid">
+
+                <div class="stat-card1">
+                    <h3>500+</h3>
+                    <span>Daily plates</span>
+                </div>
+
+                <div class="stat-card1">
+                    <h3>12</h3>
+                    <span>Local partners</span>
+                </div>
+
+                <div class="stat-card1">
+                    <h3>100%</h3>
+                    <span>Vegetarian</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- =========================
+     contact section
+========================= -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="contact-left">
+
+            <span class="section-tag">
+                FIND US
+            </span>
+
+            <h2>
+                Order, visit, or<br>
+                plan a food stop.
+            </h2>
+
+            <p>
+                Open daily in Rajkot with pickup, local delivery,
+                and bulk snack orders for small events.
+            </p>
+
+            <div class="info-card">
+                <h4>Location</h4>
+                <p>Race Course Road, Rajkot, Gujarat</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Hours</h4>
+                <p>11:00 AM – 12:00 AM</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Phone</h4>
+                <p>+91 98765 43210</p>
+            </div>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="contact-right">
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="input-row">
+
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your name">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Phone</label>
+                        <input type="text" placeholder="10-digit number">
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>Order note</label>
+
+                    <textarea rows="6" placeholder="Tell us what you are craving..."></textarea>
+                </div>
+
+                <button type="submit" class="send-btn">
+                    Send Request
+                </button>
+
+                <p id="successMessage" class="form-message success">
+                    Thanks. Your request is ready for the Khau-Gali team.
+                </p>
+
+                <p id="errorMessage" class="form-message error">
+                    Please fill all required fields correctly.
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     CART SIDEBAR
+========================= -->
+
+    <aside class="cart-sidebar" id="cart">
+
+        <div class="cart-header">
+
+            <div>
+
+                <span class="cart-tag">
+                    YOUR ORDER
+                </span>
+
+                <h2>Cart</h2>
+
+            </div>
+
+            <button id="closeCart">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+        </div>
+        <div class="cart-body" id="cartItems">
+
+            <div class="empty-cart">
+
+                <i class="bi bi-cart-x"></i>
+
+                <h4>Your cart is empty</h4>
+
+                <p>
+                    Add delicious food items
+                    to begin.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="summary">
+
+                <div class="delivery-progress">
+
+                    <div class="progress">
+
+                        <div class="progress-bar" id="progressBar">
+                        </div>
+
+                    </div>
+
+                </div>
+                <p id="deliveryText" class="deliveryText">
+                    Add ₹299 more for free delivery.
+                </p>
+
+                <div>
+
+                    <span>Subtotal</span>
+
+                    <span id="subtotal">
+                        ₹0
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <span>Delivery</span>
+
+                    <span>
+                        ₹40
+                    </span>
+
+                </div>
+
+                <div class="total">
+
+                    <span>Total</span>
+
+                    <span id="grandTotal">
+                        ₹40
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button class="checkout-btn">
+
+                Place Prototype Order
+
+            </button>
+
+        </div>
+
+    </aside>
+
+    <div class="cart-overlay"></div>
+
+    <!-- *********** -->
+    <!-- wishlist-slider -->
+    <!-- *********** -->
+   <aside class="wishlist-sidebar" id="wishlist">
+
+        <div class="wishlist-header">
+
+            <div>
+
+                <span class="wishlist-tag">
+                    YOUR ITEMS
+                </span>
+
+                <h2>Wishlist</h2>
+
+            </div>
+
+            <button id="closeWishlist">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+        </div>
+        <div class="wishlist-body" id="wishlistItems">
+
+            <div class="empty-wishlist">
+
+                <i class="bi bi-cart-x"></i>
+
+                <h4>Your wishlist is empty</h4>
+
+                <p>
+                    Add delicious food items
+                    to begin.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        
+
+    </aside>
+
+    <div class="wishlist-overlay"></div>
+
+    <!-- tost notification -->
+    <!-- *********** -->
+    <div class="toast" id="toast">
+
+        <i class="bi bi-check-circle-fill"></i>
+
+        <span>
+            Item added to cart
+        </span>
+
+    </div>
+
+    <!-- =========================
+     footer section
+========================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- LEFT -->
+            <div class="footer-left">
+
+                <div class="logo">
+
+                    <div class="logo-circle">KG</div>
+
+                    <div>
+                        <h3>Khau-Gali</h3>
+                        <span>by DiGi Trend</span>
+                    </div>
+
+                </div>
+
+                <p>
+                    Rajkot street food, served hot with a digital-first ordering flow.
+                </p>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="footer-links">
+
+                <a href="#menu-section">Menu</a>
+                <a href="#specials">Specials</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+        <!-- ✅ BOTTOM LINE -->
+        <div class="footer-bottom">
+            © 2026 Manav Kareliya. All rights reserved.
+        </div>
+
+    </footer>
+    <!-- JS -->
+
+    <script src="assets/js/products.js"></script>
+
+    <script src="assets/js/toast.js"></script>
+
+    <script src="assets/js/cart.js"></script>
+
+    <!-- <script src="assets/js/wishlist.js"></script> -->
+
+    <script src="assets/js/wish.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+    <script src="assets/js/navbar.js"></script>
+
+    <script src="assets/js/contactform.js"></script>
+
+</body>
+
+
+</html>

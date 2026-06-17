@@ -1,0 +1,54 @@
+.reveal{
+
+    opacity:0;
+
+    transform:
+    translateY(60px);
+
+    transition:
+    .8s ease;
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+}
+/* 
+.food-card{
+
+    transition:
+    .4s ease;
+}
+
+.food-card:hover{
+
+    transform:
+    translateY(-10px);
+} */
+
+.combo-card{
+
+    transition:
+    .4s ease;
+}
+
+.combo-card:hover{
+
+    transform:
+    translateY(-12px);
+}
+
+.info-card{
+
+    transition:
+    .4s ease;
+}
+
+.info-card:hover{
+
+    transform:
+    translateY(-6px);
+}
