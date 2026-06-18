@@ -1,8 +1,4 @@
-/* =====================================================
-   RESPONSIVE FIXES
-   Desktop styles are untouched. All changes below apply
-   only under the listed breakpoints.
-===================================================== */
+
 
 @media (max-width: 1200px) {
     .hero-content h1 {
